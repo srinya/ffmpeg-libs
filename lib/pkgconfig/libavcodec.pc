@@ -1,0 +1,14 @@
+prefix=./outwin32
+exec_prefix=${prefix}
+libdir=./outwin32/lib
+includedir=./outwin32/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.97.100
+Requires: 
+Requires.private: libswresample >= 3.8.100, libavutil >= 56.56.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -liconv -lm -LC:/msys64/ffmpeg/x264win32/lib -lx264 -lole32 -luser32
+Cflags: -I${includedir}

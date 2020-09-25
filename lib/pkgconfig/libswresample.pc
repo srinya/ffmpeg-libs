@@ -1,0 +1,14 @@
+prefix=./outwin32
+exec_prefix=${prefix}
+libdir=./outwin32/lib
+includedir=./outwin32/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 3.8.100
+Requires: 
+Requires.private: libavutil >= 56.56.100
+Conflicts:
+Libs: -L${libdir}  -lswresample 
+Libs.private: -lm
+Cflags: -I${includedir}
